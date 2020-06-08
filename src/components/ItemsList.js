@@ -5,6 +5,8 @@ import {BreadCrumbBarContainer} from '../containers/BreadCrumbBarContainer';
 
 import './General.scss';
 
+import './ItemsList.scss';
+
 export const ItemsList = (props) => {
     const {
         items = [],
