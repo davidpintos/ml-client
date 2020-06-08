@@ -1,0 +1,16 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    background: #EEE;
+}
+
+.general-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-bar {
+    height: 60px;
+    background: #EEE;
+}
+

@@ -1,0 +1,68 @@
+*:focus, button:focus {
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+form {
+    display: flex;
+    margin: 0;
+
+    input {
+        width: 45vw;
+        height: 38px;
+        padding-left: 10px;
+        border: 1px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .submitBtn {
+        background-image: url('../images/ic_Search.png');
+        background-repeat: no-repeat;
+        height: 38px;
+        width: 36px;
+        background-position: center;
+        border: none;
+        background-color: #EEE;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        cursor: pointer;
+    }
+}
+
+.header {
+    .bar {
+        background-color: #ffe600;
+        height: 70px;
+        align-items: center;
+    }
+
+    .form-section {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        background-image: url('../images/Logo_ML.png');
+        background-repeat: no-repeat;
+        width: 53px;
+        height: 37px;
+    }
+
+    .logo-section {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.breadcrumb-container {
+    background: #EEE;
+    height: 7vh;
+    padding: 0;
+}
