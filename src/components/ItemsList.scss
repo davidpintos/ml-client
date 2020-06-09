@@ -1,23 +1,61 @@
 .items-list {
-
     .content {
-        height: 100%;
         background: #FFF;
+        border-radius: 4px;
+        min-height: 0;
+    }
+
+    .details, .content {
+        padding: 0;
+    }
+
+    .details {
+        .price {
+            font-size: 24px;
+            margin-bottom: 32px;
+            display: flex;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .freeShipping {
+            background: url('../images/ic_shipping.png');
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: 8px;
+        }
+    }
+
+    .state {
+        font-size: 12px;
+        margin-top: 16px;
+        color: #666666;
     }
 
     .item {
         display: flex;
-        padding: 16px;
+        padding: 13px;
+        margin: 3px;
         cursor: pointer;
+        border-bottom: 1px solid #EEE;
+    }
+
+    .item:last-of-type {
+        border-bottom: 0;
     }
 
     .photo {
         min-width: 180px;
         min-height: 180px;
+        margin-right: 16px;
 
         img {
             max-width: 180px;
             max-height: 180px;
+            border-radius: 4px;
         }
     }
 }

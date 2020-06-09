@@ -23,7 +23,7 @@ export const BreadCrumbBar = (props) => {
 
     return (
         <div className="breadcrumb-bar">
-            <div className="col-7 mx-auto categories">
+            <div className="col-9 mx-auto categories">
                 <nav>
                     {content}
                 </nav>

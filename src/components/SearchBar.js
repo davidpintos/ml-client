@@ -10,7 +10,7 @@ const SearchBar = (props) => {
     let currentQuery = '';
 
     if (location && location.search) {
-        currentQuery = location.search.split('=')[1].replace('+', ' ');
+        currentQuery = location.search.split('=')[1].replace(/\+/g, ' ');
     }
 
     const [query, setQuery] = useState(currentQuery);
@@ -19,14 +19,18 @@ const SearchBar = (props) => {
         history.push(`/items?search=${query}`);
     }
 
+    const handleLogoClick = () => {
+        history.push('/');
+    }
+
     return (
         <header className="header">
             <div className="container-fluid">
                 <div className="row bar">
-                    <div className="col-3 logo-section">
-                        <div className="logo" />
+                    <div className="col-2 logo-section">
+                        <div className="logo" onClick={handleLogoClick} />
                     </div>
-                    <div className="col-9 form-section">
+                    <div className="col-10 form-section">
                         <form onSubmit={handleFormSubmit}>
                             <input
                                 name="query"

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {SearchBarContainer} from '../containers/SearchBarContainer';
 import {BreadCrumbBarContainer} from '../containers/BreadCrumbBarContainer';
@@ -9,26 +9,46 @@ import './ItemsList.scss';
 
 export const ItemsList = (props) => {
     const {
+        history,
         items = [],
         query,
         onComponentLoad,
     } = props;
 
+    const componentJustMounted = useRef(true);
+
     useEffect(() => {
         const {query} = props;
 
         onComponentLoad(query);
-    }, [items]);
+    }, []);
 
-    let itemsContent = items.map(({id, picture, state, title, price}) => {
+    const handleItemClick = (e) => {
+        const id = e.currentTarget.id;
+
+        history.push(`/items/${id}`);
+    }
+
+    let itemsContent = items.map(({id, picture, state, title, price, free_shipping}) => {
+        const priceFormatted = `$ ${new Intl.NumberFormat()
+            .format(price.amount)
+            .replace(',','.')}`;
+
+        let shipping = null;
+
+        if (free_shipping) {
+            shipping = (<div className="freeShipping" />);
+        }
+
         return (
-            <section key={`item-${id}`} className="item">
+            <section id={id} key={`item-${id}`} className="item" onClick={(e) => handleItemClick(e)}>
                 <div className="photo d-flex justify-content-center">
                     <img src={picture} />
                 </div>
                 <div className="col-8 details">
                     <div className="price">
-                        {price.amount}
+                        {priceFormatted}
+                        {shipping}
                     </div>
                     <div className="title">
                         {title}
@@ -46,7 +66,7 @@ export const ItemsList = (props) => {
             <section className="top-bar">
                 <SearchBarContainer />
             </section>
-            <section className="breadcrumb-container">
+            <section>
                 <BreadCrumbBarContainer />
             </section>
             <section className="items-list">

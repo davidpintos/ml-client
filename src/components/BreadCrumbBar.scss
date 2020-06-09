@@ -1,8 +1,12 @@
-.breadcrumb-bar {
-    color: #999;
+.breadcrumb-container {
+    background: #EEE;
 
-    .categories {
-        padding: 16px 0px 16px 0;
-        font-size: 14px;
+    .breadcrumb-bar {
+        color: #999;
+
+        .categories {
+            padding: 16px 0px 16px 0;
+            font-size: 14px;
+        }
     }
 }
