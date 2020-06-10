@@ -1,7 +1,9 @@
+@import '_helpers';
+
 .items-list {
     .content {
-        background: #FFF;
-        border-radius: 4px;
+        background: $white;
+        border-radius: $border-radius;
         min-height: 0;
     }
 
@@ -11,13 +13,13 @@
 
     .details {
         .price {
-            font-size: 24px;
-            margin-bottom: 32px;
+            font-size: $font-size-medium-large;
+            margin-bottom: $medium-space;
             display: flex;
         }
 
         .title {
-            font-size: 18px;
+            font-size: $font-size-medium-small;
         }
 
         .freeShipping {
@@ -30,9 +32,9 @@
     }
 
     .state {
-        font-size: 12px;
-        margin-top: 16px;
-        color: #666666;
+        font-size: $font-size-tiny;
+        margin-top: $small-space;
+        color: $light-black;
     }
 
     .item {
@@ -40,7 +42,7 @@
         padding: 13px;
         margin: 3px;
         cursor: pointer;
-        border-bottom: 1px solid #EEE;
+        border-bottom: 1px solid $light-gray;
     }
 
     .item:last-of-type {
@@ -48,14 +50,14 @@
     }
 
     .photo {
-        min-width: 180px;
-        min-height: 180px;
-        margin-right: 16px;
+        min-width: $photo-list-size;
+        min-height: $photo-list-size;
+        margin-right: $small-space;
 
         img {
-            max-width: 180px;
-            max-height: 180px;
-            border-radius: 4px;
+            max-width: $photo-list-size;
+            max-height: $photo-list-size;
+            border-radius: $border-radius;
         }
     }
 }

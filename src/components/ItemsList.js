@@ -1,9 +1,9 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect} from 'react';
 
 import {SearchBarContainer} from '../containers/SearchBarContainer';
 import {BreadCrumbBarContainer} from '../containers/BreadCrumbBarContainer';
 
-import './General.scss';
+import {getPriceFormatted} from '../utils';
 
 import './ItemsList.scss';
 
@@ -14,8 +14,6 @@ export const ItemsList = (props) => {
         query,
         onComponentLoad,
     } = props;
-
-    const componentJustMounted = useRef(true);
 
     useEffect(() => {
         const {query} = props;
@@ -30,9 +28,7 @@ export const ItemsList = (props) => {
     }
 
     let itemsContent = items.map(({id, picture, state, title, price, free_shipping}) => {
-        const priceFormatted = `$ ${new Intl.NumberFormat()
-            .format(price.amount)
-            .replace(',','.')}`;
+        const priceFormatted = getPriceFormatted(price.amount);
 
         let shipping = null;
 
@@ -66,7 +62,7 @@ export const ItemsList = (props) => {
             <section className="top-bar">
                 <SearchBarContainer />
             </section>
-            <section>
+            <section className="breadcrumb-container">
                 <BreadCrumbBarContainer />
             </section>
             <section className="items-list">

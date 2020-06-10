@@ -1,0 +1,45 @@
+$white: #FFFFFF;
+$yellow: #FFE600;
+$black: #333333;
+$light-black: #666666;
+$gray: #999999;
+$light-gray: #EEEEEE;
+$blue: #3483FA;
+
+$small-space: 16px;
+$medium-space: $small-space * 2;
+
+$font-size-tiny: 12px;
+$font-size-small: 14px;
+$font-size-normal: 16px;
+$font-size-medium-small: 18px;
+$font-size-medium: 20px;
+$font-size-medium-large: $font-size-tiny * 2;
+$font-size-large-medium: 28px;
+$font-size-large: 46px;
+
+$border-radius: 4px;
+
+$photo-list-size: 180px;
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin mq($mq) {
+    @if $mq == 690  { @media (max-width: 690px)  { @content; } }
+    @if $mq == 320  { @media (max-width: 320px)  { @content; } }
+
+    @if $mq == retina {
+      @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+          @content;
+      }
+    }
+  }

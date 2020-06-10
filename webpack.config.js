@@ -57,14 +57,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-          test: /\.(png|svg|jpg|gif)$/,
+          test: /\.(png|svg|jpg|gif|ico)$/,
           use: [
             'file-loader',
           ],
         },
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') })]
+  plugins: [new HtmlWebpackPlugin({
+    favicon: "./src/favicon.ico",
+    template: path.resolve(__dirname, 'src', 'index.html'),
+  })]
 };
 
 

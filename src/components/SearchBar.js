@@ -4,7 +4,6 @@ import { SEARCH_PLACEHOLDER } from './constants';
 
 import './SearchBar.scss';
 
-
 const SearchBar = (props) => {
     const { handleSubmit, history, location} = props;
     let currentQuery = '';

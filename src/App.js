@@ -9,6 +9,8 @@ import { createBrowserHistory } from 'history';
 
 import reducer from './reducers/index';
 
+import './components/General.scss';
+
 export default class App extends React.Component {
     constructor(props) {
         super(props);

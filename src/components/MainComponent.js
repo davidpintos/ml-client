@@ -2,8 +2,6 @@ import React from 'react';
 
 import {SearchBarContainer} from '../containers/SearchBarContainer';
 
-import './General.scss';
-
 export const MainComponent = () => {
 
     return (

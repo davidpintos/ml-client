@@ -1,12 +1,14 @@
+@import '_helpers';
+
 .breadcrumb-container {
-    background: #EEE;
+    background: $light-gray;
 
     .breadcrumb-bar {
-        color: #999;
+        color: $gray;
 
         .categories {
-            padding: 16px 0px 16px 0;
-            font-size: 14px;
+            padding: $small-space 0px $small-space 0;
+            font-size: $font-size-small;
         }
     }
 }
