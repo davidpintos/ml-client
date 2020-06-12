@@ -1,13 +1,12 @@
 import axios from 'axios';
 
-const instance = axios.create({
-    baseURL: `http://localhost:4000`,
-});
+import {ITEMS_LIMIT, SERVER_URL} from '../components/constants';
 
-export const getItems = (query, limit = 4) =>
-    instance.get(`/api/items?q=${query}&limit=${limit}`)
+
+export const getItems = (query, limit = ITEMS_LIMIT) =>
+    axios.get(`${SERVER_URL}/api/items?q=${query}&limit=${limit}`)
         .then((response) => response)
 
 export const getItem = (itemId) =>
-    instance.get(`/api/items/${itemId}`)
+    axios.get(`${SERVER_URL}/api/items/${itemId}`)
         .then((response) => response)

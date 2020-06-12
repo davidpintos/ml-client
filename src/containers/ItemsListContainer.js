@@ -5,9 +5,6 @@ import {getItems} from '../api';
 
 import {setCategories, setItems} from '../actions';
 
-import {  useLocation
-} from "react-router-dom";
-
 
 const mapStateToProps = ({items}, {match, location}) => {
     const {

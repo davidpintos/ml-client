@@ -7,7 +7,6 @@ export const setItem = (item) => ({
     payload: item,
 });
 
-
 export const setItems = (items) => ({
     type: SET_ITEMS,
     payload: items,

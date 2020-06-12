@@ -19,7 +19,7 @@ export const ItemsList = (props) => {
         const {query} = props;
 
         onComponentLoad(query);
-    }, []);
+    }, [query]);
 
     const handleItemClick = (e) => {
         const id = e.currentTarget.id;

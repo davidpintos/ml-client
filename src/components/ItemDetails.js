@@ -33,6 +33,7 @@ export const ItemDetails = (props) => {
 
     let itemPrice = null;
     let itemPriceDecimals = null;
+
     if (currentItem.price) {
         const {amount, decimals} = currentItem.price;
 
@@ -71,7 +72,9 @@ export const ItemDetails = (props) => {
                                 {currentItem.title}
                             </div>
                             <div className="d-flex product-price">
-                                {itemPrice}
+                                <div className="amount">
+                                    {itemPrice}
+                                </div>
                                 <div className="decimals">
                                     {itemPriceDecimals}
                                 </div>

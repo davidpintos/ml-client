@@ -7,7 +7,7 @@ export const MainComponent = () => {
     return (
         <div className="main-container">
             <section className="top-bar">
-                <SearchBarContainer />
+                <SearchBarContainer className="searchBar"/>
             </section>
         </div>
     )
