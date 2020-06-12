@@ -1,5 +1,5 @@
 # Client Project
-It was developed using node v12. 
+It was developed using node v12. For this to work properly, the server should be running on a different terminal.
 
 Commands to build and run it:
 
